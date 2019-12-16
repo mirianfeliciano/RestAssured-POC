@@ -1,0 +1,345 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "content",
+    "pageable",
+    "last",
+    "totalElements",
+    "totalPages",
+    "size",
+    "number",
+    "numberOfElements",
+    "first",
+    "sort"
+  ],
+  "properties": {
+    "content": {
+      "$id": "#/properties/content",
+      "type": "array",
+      "title": "The Content Schema",
+      "items": {
+        "$id": "#/properties/content/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "codigo",
+          "nome",
+          "endereco",
+          "ativo",
+          "contatos"
+        ],
+        "properties": {
+          "codigo": {
+            "$id": "#/properties/content/items/properties/codigo",
+            "type": "integer",
+            "title": "The Codigo Schema",
+            "default": 0
+          },
+          "nome": {
+            "$id": "#/properties/content/items/properties/nome",
+            "type": "string",
+            "title": "The Nome Schema",
+            "default": "",
+            "pattern": "^(.*)$"
+          },
+          "endereco": {
+            "$id": "#/properties/content/items/properties/endereco",
+            "type": "object",
+            "title": "The Endereco Schema",
+            "required": [
+              "logradouro",
+              "numero",
+              "complemento",
+              "bairro",
+              "cep",
+              "cidade"
+            ],
+            "properties": {
+              "logradouro": {
+                "$id": "#/properties/content/items/properties/endereco/properties/logradouro",
+                "type": "string",
+                "title": "The Logradouro Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "numero": {
+                "$id": "#/properties/content/items/properties/endereco/properties/numero",
+                "type": "string",
+                "title": "The Numero Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "complemento": {
+                "$id": "#/properties/content/items/properties/endereco/properties/complemento",
+                "type": "null",
+                "title": "The Complemento Schema",
+                "default": null
+              },
+              "bairro": {
+                "$id": "#/properties/content/items/properties/endereco/properties/bairro",
+                "type": "string",
+                "title": "The Bairro Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "cep": {
+                "$id": "#/properties/content/items/properties/endereco/properties/cep",
+                "type": "string",
+                "title": "The Cep Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "cidade": {
+                "$id": "#/properties/content/items/properties/endereco/properties/cidade",
+                "type": "object",
+                "title": "The Cidade Schema",
+                "required": [
+                  "codigo",
+                  "nome",
+                  "estado"
+                ],
+                "properties": {
+                  "codigo": {
+                    "$id": "#/properties/content/items/properties/endereco/properties/cidade/properties/codigo",
+                    "type": "integer",
+                    "title": "The Codigo Schema"
+                  },
+                  "nome": {
+                    "$id": "#/properties/content/items/properties/endereco/properties/cidade/properties/nome",
+                    "type": "string",
+                    "title": "The Nome Schema",
+                    "default": "",
+                    "pattern": "^(.*)$"
+                  },
+                  "estado": {
+                    "$id": "#/properties/content/items/properties/endereco/properties/cidade/properties/estado",
+                    "type": "object",
+                    "title": "The Estado Schema",
+                    "required": [
+                      "codigo",
+                      "nome"
+                    ],
+                    "properties": {
+                      "codigo": {
+                        "$id": "#/properties/content/items/properties/endereco/properties/cidade/properties/estado/properties/codigo",
+                        "type": "integer",
+                        "title": "The Codigo Schema",
+                        "default": 0
+                      },
+                      "nome": {
+                        "$id": "#/properties/content/items/properties/endereco/properties/cidade/properties/estado/properties/nome",
+                        "type": "string",
+                        "title": "The Nome Schema",
+                        "default": "",
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ativo": {
+            "$id": "#/properties/content/items/properties/ativo",
+            "type": "boolean",
+            "title": "The Ativo Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "contatos": {
+            "$id": "#/properties/content/items/properties/contatos",
+            "type": "array",
+            "title": "The Contatos Schema"
+          }
+        }
+      }
+    },
+    "pageable": {
+      "$id": "#/properties/pageable",
+      "type": "object",
+      "title": "The Pageable Schema",
+      "required": [
+        "sort",
+        "offset",
+        "pageSize",
+        "pageNumber",
+        "paged",
+        "unpaged"
+      ],
+      "properties": {
+        "sort": {
+          "$id": "#/properties/pageable/properties/sort",
+          "type": "object",
+          "title": "The Sort Schema",
+          "required": [
+            "unsorted",
+            "sorted"
+          ],
+          "properties": {
+            "unsorted": {
+              "$id": "#/properties/pageable/properties/sort/properties/unsorted",
+              "type": "boolean",
+              "title": "The Unsorted Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "sorted": {
+              "$id": "#/properties/pageable/properties/sort/properties/sorted",
+              "type": "boolean",
+              "title": "The Sorted Schema",
+              "default": false,
+              "examples": [
+                false
+              ]
+            }
+          }
+        },
+        "offset": {
+          "$id": "#/properties/pageable/properties/offset",
+          "type": "integer",
+          "title": "The Offset Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "pageSize": {
+          "$id": "#/properties/pageable/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            5
+          ]
+        },
+        "pageNumber": {
+          "$id": "#/properties/pageable/properties/pageNumber",
+          "type": "integer",
+          "title": "The Pagenumber Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "paged": {
+          "$id": "#/properties/pageable/properties/paged",
+          "type": "boolean",
+          "title": "The Paged Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "unpaged": {
+          "$id": "#/properties/pageable/properties/unpaged",
+          "type": "boolean",
+          "title": "The Unpaged Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        }
+      }
+    },
+    "last": {
+      "$id": "#/properties/last",
+      "type": "boolean",
+      "title": "The Last Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "totalElements": {
+      "$id": "#/properties/totalElements",
+      "type": "integer",
+      "title": "The Totalelements Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "totalPages": {
+      "$id": "#/properties/totalPages",
+      "type": "integer",
+      "title": "The Totalpages Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "size": {
+      "$id": "#/properties/size",
+      "type": "integer",
+      "title": "The Size Schema",
+      "default": 0,
+      "examples": [
+        5
+      ]
+    },
+    "number": {
+      "$id": "#/properties/number",
+      "type": "integer",
+      "title": "The Number Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "numberOfElements": {
+      "$id": "#/properties/numberOfElements",
+      "type": "integer",
+      "title": "The Numberofelements Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "first": {
+      "$id": "#/properties/first",
+      "type": "boolean",
+      "title": "The First Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "sort": {
+      "$id": "#/properties/sort",
+      "type": "object",
+      "title": "The Sort Schema",
+      "required": [
+        "unsorted",
+        "sorted"
+      ],
+      "properties": {
+        "unsorted": {
+          "$id": "#/properties/sort/properties/unsorted",
+          "type": "boolean",
+          "title": "The Unsorted Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "sorted": {
+          "$id": "#/properties/sort/properties/sorted",
+          "type": "boolean",
+          "title": "The Sorted Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        }
+      }
+    }
+  }
+}

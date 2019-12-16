@@ -1,0 +1,58 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "access_token",
+    "token_type",
+    "expires_in",
+    "scope",
+    "nome",
+    "jti"
+  ],
+  "properties": {
+    "access_token": {
+      "$id": "#/properties/access_token",
+      "type": "string",
+      "title": "The Access_token Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "token_type": {
+      "$id": "#/properties/token_type",
+      "type": "string",
+      "title": "The Token_type Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "expires_in": {
+      "$id": "#/properties/expires_in",
+      "type": "integer",
+      "title": "The Expires_in Schema",
+      "default": 0
+    },
+    "scope": {
+      "$id": "#/properties/scope",
+      "type": "string",
+      "title": "The Scope Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "nome": {
+      "$id": "#/properties/nome",
+      "type": "string",
+      "title": "The Nome Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    },
+    "jti": {
+      "$id": "#/properties/jti",
+      "type": "string",
+      "title": "The Jti Schema",
+      "default": "",
+      "pattern": "^(.*)$"
+    }
+  }
+}
