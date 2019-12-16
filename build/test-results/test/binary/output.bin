@@ -1,5 +1,5 @@
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -14,7 +14,7 @@
 Multiparts:		<none>
 Body:			<none>
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -29,7 +29,7 @@
 Multiparts:		<none>
 Body:			<none>
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -44,7 +44,7 @@
 Multiparts:		<none>
 Body:			<none>
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -59,7 +59,7 @@
 Multiparts:		<none>
 Body:			<none>
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -74,7 +74,7 @@
 Multiparts:		<none>
 Body:			<none>
 Request method:	POST
-/Request URI:	http://localhost:8080/oauth/token
+^Request URI:	http://algamoneyapi-env.98hpppxyzr.us-east-1.elasticbeanstalk.com:80/oauth/token
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
