@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage ('Test Front') {
+        stage ('Test back') {
             steps {
                 sh '''
                     ./gradlew clean test --info
